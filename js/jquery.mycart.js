@@ -1,7 +1,7 @@
 /*
- * jQuery myCart - v1.9 - 2020-12-03
- * http://asraf-uddin-ahmed.github.io/
- * Copyright (c) 2017 Asraf Uddin Ahmed; Licensed None
+ * jQuery cart - v1.0 - 2023-05-22
+ * http://github.com/vanillabush/
+ * Copyright (c) 2023 Ohia Ikenna Markhenry; Licensed None
  */
 
 (function ($) {
