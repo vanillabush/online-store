@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Electro Shop</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+  <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+  <link type="text/css" rel="stylesheet" href="css/slick.css" />
+  <link type="text/css" rel="stylesheet" href="css/slick-theme.css" />
+
+  <link type="text/css" rel="stylesheet" href="css/nouislider.min.css" />
+
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+
+  <link type="text/css" rel="stylesheet" href="css/style.css" />
+
+  <script>nonce="28f05524-bad4-4d7d-8b34-eb093ff6a98a">(function (w, d) { !function (bv, bw, bx, by) { bv[bx] = bv[bx] || {}; bv[bx].executed = []; bv.zaraz = { deferred: [], listeners: [] }; bv.zaraz.q = []; bv.zaraz._f = function (bz) { return function () { var bA = Array.prototype.slice.call(arguments); bv.zaraz.q.push({ m: bz, a: bA }) } }; for (const bB of ["track", "set", "debug"]) bv.zaraz[bB] = bv.zaraz._f(bB); bv.zaraz.init = () => { var bC = bw.getElementsByTagName(by)[0], bD = bw.createElement(by), bE = bw.getElementsByTagName("title")[0]; bE && (bv[bx].t = bw.getElementsByTagName("title")[0].text); bv[bx].x = Math.random(); bv[bx].w = bv.screen.width; bv[bx].h = bv.screen.height; bv[bx].j = bv.innerHeight; bv[bx].e = bv.innerWidth; bv[bx].l = bv.location.href; bv[bx].r = bw.referrer; bv[bx].k = bv.screen.colorDepth; bv[bx].n = bw.characterSet; bv[bx].o = (new Date).getTimezoneOffset(); if (bv.dataLayer) for (const bI of Object.entries(Object.entries(dataLayer).reduce(((bJ, bK) => ({ ...bJ[1], ...bK[1] }))))) zaraz.set(bI[0], bI[1], { scope: "page" }); bv[bx].q = []; for (; bv.zaraz.q.length;) { const bL = bv.zaraz.q.shift(); bv[bx].q.push(bL) } bD.defer = !0; for (const bM of [localStorage, sessionStorage]) Object.keys(bM || {}).filter((bO => bO.startsWith("_zaraz_"))).forEach((bN => { try { bv[bx]["z_" + bN.slice(7)] = JSON.parse(bM.getItem(bN)) } catch { bv[bx]["z_" + bN.slice(7)] = bM.getItem(bN) } })); bD.referrerPolicy = "origin"; bD.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(bv[bx]))); bC.parentNode.insertBefore(bD, bC) };["complete", "interactive"].includes(bw.readyState) ? zaraz.init() : bv.addEventListener("DOMContentLoaded", zaraz.init) }(w, d, "zarazData", "script"); })(window, document);</script>
+  <style>
+    .badge-notify {
+      background: red;
+      position: relative;
+      top: -20px;
+      right: 10px;
+    }
+
+    .my-cart-icon-affix {
+      position: fixed;
+      z-index: 999;
+    }
+  </style>
+ 
+</head>
+
+<body>
+
+  <header>
+
+    <div id="top-header">
+      <div class="container">
+        <ul class="header-links pull-left">
+          <li><a href="#"><i class="fa fa-phone"></i> +234 815 639 2533</a></li>
+          <li><a href="#"><i class="fa fa-envelope-o"></i> <span class="__cf_email__"
+                data-cfemail="iykemarkhenry@gmail.com">[email&#160;protected]</span></a></li>
+          <li><a href="#"><i class="fa fa-map-marker"></i> Central Business District, Abuja</a></li>
+        </ul>
+        <ul class="header-links pull-right">
+          <li><a href="#"><i class="fa fa-dollar"></i> USD</a></li>
+          <li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div id="header">
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-md-3">
+            <div class="header-logo">
+              <a href="#" class="logo">
+                <img src="img/logo.png" alt="">
+              </a>
+            </div>
+          </div>
+
+
+          <div class="col-md-6">
+            <div class="header-search">
+              <form>
+                <select class="input-select">
+                  <option value="0">All Categories</option>
+                  <option value="1">Laptops</option>
+                  <option value="2">Accessories</option>
+                  <option value="2">Mobile Phones</option>
+                </select>
+                <input class="input" placeholder="Search here">
+                <button class="search-btn">Search</button>
+              </form>
+            </div>
+          </div>
+
+
+          <div class="col-md-3 clearfix">
+            <div class="header-ctn">
+
+              <!-- <div>
+                <a href="#">
+                  <i class="fa fa-heart-o"></i>
+                  <span>Your Wishlist</span>
+                  <div class="qty">2</div>
+                </a>
+              </div> -->
+
+
+              <div class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                  <i class="fa fa-shopping-cart my-cart-icon"></i>
+                  <span>Your Cart</span>
+                  <div class="qty badge badge-notify my-cart-badge" id="cart"></div>
+                </a>
+                
+              </div>
+
+
+              <div class="menu-toggle">
+                <a href="#">
+                  <i class="fa fa-bars"></i>
+                  <span>Menu</span>
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <nav id="navigation">
+
+    <div class="container">
+
+      <div id="responsive-nav">
+
+        <ul class="main-nav nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Hot Deals</a></li>
+          <li><a href="#">Categories</a></li>
+          <li><a href="#">Laptops</a></li>
+          <li><a href="#">Smartphones</a></li>
+          <li><a href="#">Cameras</a></li>
+          <li><a href="#">Accessories</a></li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+  <div class="section">
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-4 col-xs-6">
+          <div class="shop">
+            <div class="shop-img">
+              <img src="img/shop01.png" alt="">
+            </div>
+            <div class="shop-body">
+              <h3>Laptop<br>Collection</h3>
+              <a href="#" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4 col-xs-6">
+          <div class="shop">
+            <div class="shop-img">
+              <img src="img/shop03.png" alt="">
+            </div>
+            <div class="shop-body">
+              <h3>Accessories<br>Collection</h3>
+              <a href="#" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4 col-xs-6">
+          <div class="shop">
+            <div class="shop-img">
+              <img src="img/shop02.png" alt="">
+            </div>
+            <div class="shop-body">
+              <h3>Cameras<br>Collection</h3>
+              <a href="#" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="section">
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-12">
+          <div class="section-title">
+            <h3 class="title">New Products</h3>
+            <div class="section-nav">
+              <ul class="section-tab-nav tab-nav">
+                <li class="active"><a data-toggle="tab" href="#tab1">Laptops</a></li>
+                <li><a data-toggle="tab" href="#tab2">Smartphones</a></li>
+                <li><a data-toggle="tab" href="#tab1">Cameras</a></li>
+                <li><a data-toggle="tab" href="#accessories">Accessories</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-12">
+          <div class="row">
+            <div class="products-tabs">
+
+              <div id="tab1" class="tab-pane active">
+                <div class="products-slick" data-nav="#slick-nav-1">
+
+                  <div class="product">
+                    <div class="product-img">
+                      <img src="img/product01.png" alt="">
+                      <div class="product-label">
+                        <span class="sale">-30%</span>
+                        <span class="new">NEW</span>
+                      </div>
+                    </div>
+                    <div class="product-body">
+                      <p class="product-category">Laptops</p>
+                      <h3 class="product-name"><a href="#">Macbook Pro</a></h3>
+                      <h4 class="product-price">₦980.00 <del class="product-old-price">₦990.00</del></h4>
+                      <div class="product-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                      </div>
+                      
+                    </div>
+                    <div class="add-to-cart">
+                      <button class="add-to-cart-btn" data-id="1" data-name="product 1" data-summary="summary 1"
+                      data-price="980" data-quantity="1" data-image="img/product01.png"><i class="fa fa-shopping-cart"></i> add to cart</button>
+                    </div>
+                  </div>
+
+
+                  <div class="product">
+                    <div class="product-img">
+                      <img src="img/product02.png" alt="">
+                      <div class="product-label">
+                        <span class="new">NEW</span>
+                      </div>
+                    </div>
+                    <div class="product-body">
+                      <p class="product-category">Accessories</p>
+                      <h3 class="product-name"><a href="#">Pro Gaming Headset</a></h3>
+                      <h4 class="product-price">₦990.00 <del class="product-old-price">₦1000.00</del></h4>
+                      <div class="product-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                      </div>
+                      
+                    </div>
+                    <div class="add-to-cart">
+                      <button class="add-to-cart-btn"data-id="2" data-name="product 2" data-summary="summary 2"
+                      data-price="990" data-quantity="1" data-image="img/product02.png"><i class="fa fa-shopping-cart"></i> add to cart</button>
+                    </div>
+                  </div>
+
+
+                  <div class="product">
+                    <div class="product-img">
+                      <img src="img/product03.png" alt="">
+                      <div class="product-label">
+                        <span class="sale">-30%</span>
+                      </div>
+                    </div>
+                    <div class="product-body">
+                      <p class="product-category">Laptop</p>
+                      <h3 class="product-name"><a href="#">Macbook</a></h3>
+                      <h4 class="product-price">₦980.00 <del class="product-old-price">₦990.00</del></h4>
+                      <div class="product-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                      </div>
+                      
+                    </div>
+                    <div class="add-to-cart">
+                      <button class="add-to-cart-btn"data-id="3" data-name="product 3" data-summary="summary 3"
+                      data-price="980" data-quantity="1" data-image="img/product03.png"><i class="fa fa-shopping-cart"></i> add to cart</button>
+                    </div>
+                  </div>
+
+
+                  <div class="product">
+                    <div class="product-img">
+                      <img src="img/product04.png" alt="">
+                    </div>
+                    <div class="product-body">
+                      <p class="product-category">Smartphones</p>
+                      <h3 class="product-name"><a href="#">Sony Tablet</a></h3>
+                      <h4 class="product-price">₦980.00 <del class="product-old-price">₦990.00</del></h4>
+                      <div class="product-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                      </div>
+                    </div>
+                    <div class="add-to-cart">
+                      <button class="add-to-cart-btn" data-id="4" data-name="product 4" data-summary="summary 4"
+                      data-price="980" data-quantity="1" data-image="img/product04.png"><i class="fa fa-shopping-cart"></i> add to cart</button>
+                    </div>
+                  </div>
+
+
+                  <div class="product">
+                    <div class="product-img">
+                      <img src="img/product05.png" alt="">
+                    </div>
+                    <div class="product-body">
+                      <p class="product-category">Accessories</p>
+                      <h3 class="product-name"><a href="#">Sony Pro Headset</a></h3>
+                      <h4 class="product-price">₦980.00 <del class="product-old-price">₦990.00</del></h4>
+                      <div class="product-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                      </div>
+                      
+                    </div>
+                    <div class="add-to-cart">
+                      <button class="add-to-cart-btn" data-id="5" data-name="product 5" data-summary="summary 5"
+                      data-price="980" data-quantity="1" data-image="img/product05.png"><i class="fa fa-shopping-cart"></i> add to cart</button>
+                    </div>
+                  </div>
+
+                </div>
+                <div id="slick-nav-1" class="products-slick-nav"></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div id="hot-deal" class="section">
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="hot-deal">
+            <ul class="hot-deal-countdown">
+              <li>
+                <div>
+                  <h3>02</h3>
+                  <span>Days</span>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>10</h3>
+                  <span>Hours</span>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>34</h3>
+                  <span>Mins</span>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h3>60</h3>
+                  <span>Secs</span>
+                </div>
+              </li>
+            </ul>
+            <h2 class="text-uppercase">hot deal this week</h2>
+            <p>New Collection Up to 50% OFF</p>
+            <a class="primary-btn cta-btn" href="#">Shop now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="section">
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-12">
+          <div class="section-title">
+            <h3 class="title">Top selling</h3>
+            <div class="section-nav">
+              <ul class="section-tab-nav tab-nav">
+                <li class="active"><a data-toggle="tab" href="#laptops">Laptops</a></li>
+                <li><a data-toggle="tab" href="#smartphones">Smartphones</a></li>
+                <li><a data-toggle="tab" href="#tab3">Cameras</a></li>
+                <li><a data-toggle="tab" href="#accesories">Accessories</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-12">
+          <div class="row">
+            <div class="products-tabs">
+
+              <div id="tab2" class="tab-pane fade in active">
+                <div class="products-slick" data-nav="#slick-nav-2">
+
+                  <div class="product">
+                    <div class="product-img">
+                      <img src="img/product06.png" alt="">
+                      <div class="product-label">
+                        <span class="sale">-30%</span>
+                        <span class="new">NEW</span>
+                      </div>
+                    </div>
+                    <div class="product-body">
+                      <p class="product-category">Laptops</p>
+                      <h3 class="product-name"><a href="#">MSI</a></h3>
+                      <h4 class="product-price">₦980.00 <del class="product-old-price">₦990.00</del></h4>
+                      <div class="product-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                      </div>
+                      
+                    </div>
+                    <div class="add-to-cart">
+                      <button class="add-to-cart-btn" data-id="6" data-name="product 6" data-summary="summary 6"
+                      data-price="980" data-quantity="1" data-image="img/product06.png"><i class="fa fa-shopping-cart"></i> add to cart</button>
+                    </div>
+                  </div>
+
+
+                  <div class="product">
+                    <div class="product-img">
+                      <img src="img/product07.png" alt="">
+                      <div class="product-label">
+                        <span class="new">NEW</span>
+                      </div>
+                    </div>
+                    <div class="product-body">
+                      <p class="product-category">Smartphones</p>
+                      <h3 class="product-name"><a href="#">Samsung Galaxy S6</a></h3>
+                      <h4 class="product-price">₦980.00 <del class="product-old-price">₦990.00</del></h4>
+                      <div class="product-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                      </div>
+                      
+                    </div>
+                    <div class="add-to-cart">
+                      <button class="add-to-cart-btn" data-id="7" data-name="product 7" data-summary="summary 7"
+                      data-price="980" data-quantity="1" data-image="img/product07.png"><i class="fa fa-shopping-cart"></i> add to cart</button>
+                    </div>
+                  </div>
+
+
+                  <div class="product">
+                    <div class="product-img">
+                      <img src="img/product08.png" alt="">
+                      <div class="product-label">
+                        <span class="sale">-30%</span>
+                      </div>
+                    </div>
+                    <div class="product-body">
+                      <p class="product-category">Laptops</p>
+                      <h3 class="product-name"><a href="#">Asus Mini Laptop</a></h3>
+                      <h4 class="product-price">₦980.00 <del class="product-old-price">₦990.00</del></h4>
+                      <div class="product-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                      </div>
+                      
+                    </div>
+                    <div class="add-to-cart">
+                      <button class="add-to-cart-btn" data-id="8" data-name="product 8" data-summary="summary 8"
+                      data-price="980" data-quantity="1" data-image="img/product08.png"><i class="fa fa-shopping-cart"></i> add to cart</button>
+                    </div>
+                  </div>
+
+
+                  <div class="product">
+                    <div class="product-img">
+                      <img src="img/product09.png" alt="">
+                    </div>
+                    <div class="product-body">
+                      <p class="product-category">Cameras</p>
+                      <h3 class="product-name"><a href="#">Rekam Digital Camera</a></h3>
+                      <h4 class="product-price">₦980.00 <del class="product-old-price">₦990.00</del></h4>
+                      <div class="product-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                      </div>
+                      
+                    </div>
+                    <div class="add-to-cart">
+                      <button class="add-to-cart-btn" data-id="9" data-name="product 9" data-summary="summary 9"
+                      data-price="980" data-quantity="1" data-image="img/product09.png"><i class="fa fa-shopping-cart"></i> add to cart</button>
+                    </div>
+                  </div>
+
+
+                  <div class="product">
+                    <div class="product-img">
+                      <img src="img/product01.png" alt="">
+                    </div>
+                    <div class="product-body">
+                      <p class="product-category">Laptops</p>
+                      <h3 class="product-name"><a href="#">Macbook Pro</a></h3>
+                      <h4 class="product-price">₦980.00 <del class="product-old-price">₦990.00</del></h4>
+                      <div class="product-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                      </div>
+                      
+                    </div>
+                    <div class="add-to-cart">
+                      <button class="add-to-cart-btn" data-id="10" data-name="product 10" data-summary="summary 10"
+                      data-price="980" data-quantity="1" data-image="img/product01.png"><i class="fa fa-shopping-cart"></i> add to cart</button>
+                    </div>
+                  </div>
+
+                </div>
+                <div id="slick-nav-2" class="products-slick-nav"></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="section">
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-4 col-xs-6">
+          <div class="section-title" id="smartphones">
+            <h4 class="title">Top selling Smartphones</h4>
+            <div class="section-nav">
+              <div id="slick-nav-3" class="products-slick-nav"></div>
+            </div>
+          </div>
+          <div class="products-widget-slick" data-nav="#slick-nav-3">
+            <div>
+
+              <div class="product-widget">
+                <div class="product-img">
+                  <img src="img/product07.png" alt="">
+                </div>
+                <div class="product-body">
+                  <p class="product-category">Smartphones</p>
+                  <h3 class="product-name"><a href="#">Samsung Galaxy S6</a></h3>
+                  <h4 class="product-price">₦980.00 <del class="product-old-price">₦990.00</del></h4>
+                </div>
+              </div>
+
+
+              <div class="product-widget">
+                <div class="product-img">
+                  <img src="img/product08.png" alt="">
+                </div>
+                <div class="product-body">
+                  <p class="product-category">Laptops</p>
+                  <h3 class="product-name"><a href="#">Asus Mini</a></h3>
+                  <h4 class="product-price">₦980.00 <del class="product-old-price">₦990.00</del></h4>
+                </div>
+              </div>
+
+
+              <div class="product-widget">
+                <div class="product-img">
+                  <img src="img/product09.png" alt="">
+                </div>
+                <div class="product-body">
+                  <p class="product-category">Cameras</p>
+                  <h3 class="product-name"><a href="#">Rekam Digital Camera</a></h3>
+                  <h4 class="product-price">₦980.00 <del class="product-old-price">₦990.00</del></h4>
+                </div>
+              </div>
+
+            </div>
+            <div>
+
+              <div class="product-widget">
+                <div class="product-img">
+                  <img src="img/product01.png" alt="">
+                </div>
+                <div class="product-body">
+                  <p class="product-category">Laptops</p>
+                  <h3 class="product-name"><a href="#">Macbook Pro</a></h3>
+                  <h4 class="product-price">₦980.00 <del class="product-old-price">₦990.00</del></h4>
+                </div>
+              </div>
+
+
+              <div class="product-widget">
+                <div class="product-img">
+                  <img src="img/product02.png" alt="">
+                </div>
+                <div class="product-body">
+                  <p class="product-category">Accessories</p>
+                  <h3 class="product-name"><a href="#">Pro Gaming Headset</a></h3>
+                  <h4 class="product-price">₦980.00 <del class="product-old-price">₦990.00</del></h4>
+                </div>
+              </div>
+
+
+              <div class="product-widget">
+                <div class="product-img">
+                  <img src="img/product03.png" alt="">
+                </div>
+                <div class="product-body">
+                  <p class="product-category">Laptops</p>
+                  <h3 class="product-name"><a href="#">Macbook Pro</a></h3>
+                  <h4 class="product-price">₦980.00 <del class="product-old-price">₦990.00</del></h4>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-xs-6">
+          <div class="section-title" id="laptops">
+            <h4 class="title">Top selling Laptops</h4>
+            <div class="section-nav">
+              <div id="slick-nav-4" class="products-slick-nav"></div>
+            </div>
+          </div>
+          <div class="products-widget-slick" data-nav="#slick-nav-4">
+            <div>
+
+              <div class="product-widget">
+                <div class="product-img">
+                  <img src="img/product04.png" alt="">
+                </div>
+                <div class="product-body">
+                  <p class="product-category">Smartphones</p>
+                  <h3 class="product-name"><a href="#">Sony Tablet</a></h3>
+                  <h4 class="product-price">₦980.00 <del class="product-old-price">₦990.00</del></h4>
+                </div>
+              </div>
+
+
+              <div class="product-widget">
+                <div class="product-img">
+                  <img src="img/product05.png" alt="">
+                </div>
+                <div class="product-body">
+                  <p class="product-category">Accessories</p>
+                  <h3 class="product-name"><a href="#">Sony Stereo Headset</a></h3>
+                  <h4 class="product-price">₦980.00 <del class="product-old-price">₦990.00</del></h4>
+                </div>
+              </div>
+
+
+              <div class="product-widget">
+                <div class="product-img">
+                  <img src="img/product06.png" alt="">
+                </div>
+                <div class="product-body">
+                  <p class="product-category">Laptops</p>
+                  <h3 class="product-name"><a href="#">MSI Gaming Laptop</a></h3>
+                  <h4 class="product-price">₦980.00 <del class="product-old-price">₦990.00</del></h4>
+                </div>
+              </div>
+
+            </div>
+            <div>
+
+              <div class="product-widget">
+                <div class="product-img">
+                  <img src="img/product07.png" alt="">
+                </div>
+                <div class="product-body">
+                  <p class="product-category">Smartphones</p>
+                  <h3 class="product-name"><a href="#">Samsung Galaxy S6</a></h3>
+                  <h4 class="product-price">₦980.00 <del class="product-old-price">₦990.00</del></h4>
+                </div>
+              </div>
+
+
+              <div class="product-widget">
+                <div class="product-img">
+                  <img src="img/product08.png" alt="">
+                </div>
+                <div class="product-body">
+                  <p class="product-category">Laptops</p>
+                  <h3 class="product-name"><a href="#">Asus Mini Laptop</a></h3>
+                  <h4 class="product-price">₦980.00 <del class="product-old-price">₦990.00</del></h4>
+                </div>
+              </div>
+
+
+              <div class="product-widget">
+                <div class="product-img">
+                  <img src="img/product09.png" alt="">
+                </div>
+                <div class="product-body">
+                  <p class="product-category">Cameras</p>
+                  <h3 class="product-name"><a href="#">Rekam Digital Camera</a></h3>
+                  <h4 class="product-price">₦980.00 <del class="product-old-price">₦990.00</del></h4>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="clearfix visible-sm visible-xs"></div>
+        <div class="col-md-4 col-xs-6">
+        <div class="section-title" id="accesories">
+            <h4 class="title">Top selling Accessories</h4>
+            <div class="section-nav">
+              <div id="slick-nav-5" class="products-slick-nav"></div>
+            </div>
+          </div>
+          <div class="products-widget-slick" data-nav="#slick-nav-5">
+            <div>
+
+              <div class="product-widget">
+                <div class="product-img">
+                  <img src="img/product01.png" alt="">
+                </div>
+                <div class="product-body">
+                  <p class="product-category">Laptops</p>
+                  <h3 class="product-name"><a href="#">Macbook Pro</a></h3>
+                  <h4 class="product-price">₦980.00 <del class="product-old-price">₦990.00</del></h4>
+                </div>
+              </div>
+
+
+              <div class="product-widget">
+                <div class="product-img">
+                  <img src="img/product02.png" alt="">
+                </div>
+                <div class="product-body">
+                  <p class="product-category">Accessories</p>
+                  <h3 class="product-name"><a href="#">Pro Gaming Headset</a></h3>
+                  <h4 class="product-price">₦980.00 <del class="product-old-price">₦990.00</del></h4>
+                </div>
+              </div>
+
+
+              <div class="product-widget">
+                <div class="product-img">
+                  <img src="img/product03.png" alt="">
+                </div>
+                <div class="product-body">
+                  <p class="product-category">Laptops</p>
+                  <h3 class="product-name"><a href="#">Macbook Pro</a></h3>
+                  <h4 class="product-price">₦980.00 <del class="product-old-price">₦990.00</del></h4>
+                </div>
+              </div>
+
+            </div>
+            <div>
+
+              <div class="product-widget">
+                <div class="product-img">
+                  <img src="img/product04.png" alt="">
+                </div>
+                <div class="product-body">
+                  <p class="product-category">Smartphones</p>
+                  <h3 class="product-name"><a href="#">Sony Tablet</a></h3>
+                  <h4 class="product-price">₦980.00 <del class="product-old-price">₦990.00</del></h4>
+                </div>
+              </div>
+
+
+              <div class="product-widget">
+                <div class="product-img">
+                  <img src="img/product05.png" alt="">
+                </div>
+                <div class="product-body">
+                  <p class="product-category">Accessories</p>
+                  <h3 class="product-name"><a href="#">Sony Gaming Headset</a></h3>
+                  <h4 class="product-price">₦980.00 <del class="product-old-price">₦990.00</del></h4>
+                </div>
+              </div>
+
+
+              <div class="product-widget">
+                <div class="product-img">
+                  <img src="img/product06.png" alt="">
+                </div>
+                <div class="product-body">
+                  <p class="product-category">Laptops</p>
+                  <h3 class="product-name"><a href="#">MSI Gaming Laptop</a></h3>
+                  <h4 class="product-price">₦980.00 <del class="product-old-price">₦990.00</del></h4>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div id="newsletter" class="section">
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="newsletter">
+            <p>Sign Up for the <strong>NEWSLETTER</strong></p>
+            <form>
+              <input class="input" type="email" placeholder="Enter Your Email">
+              <button class="newsletter-btn"><i class="fa fa-envelope"></i> Subscribe</button>
+            </form>
+            <ul class="newsletter-follow">
+              <li>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-pinterest"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <footer id="footer">
+
+    <div class="section">
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-3 col-xs-6">
+            <div class="footer">
+              <h3 class="footer-title">About Us</h3>
+              <p>We are a certified dealer of electrical and electronic appliances </p>
+              <ul class="footer-links">
+                <li><a href="#"><i class="fa fa-map-marker"></i>Central Business District, Abuja</a></li>
+                <li><a href="#"><i class="fa fa-phone"></i>+234 815 639 2533</a></li>
+                <li><a href="#"><i class="fa fa-envelope-o"></i><span class="__cf_email__"
+                      data-cfemail="iykemarkhenry@gmail.com">[email&#160;protected]</span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 col-xs-6">
+            <div class="footer">
+              <h3 class="footer-title">Categories</h3>
+              <ul class="footer-links">
+                <li><a href="#">Hot deals</a></li>
+                <li><a href="#">Laptops</a></li>
+                <li><a href="#">Smartphones</a></li>
+                <li><a href="#">Cameras</a></li>
+                <li><a href="#">Accessories</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="clearfix visible-xs"></div>
+          <div class="col-md-3 col-xs-6">
+            <div class="footer">
+              <h3 class="footer-title">Information</h3>
+              <ul class="footer-links">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Orders and Returns</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 col-xs-6">
+            <div class="footer">
+              <h3 class="footer-title">Service</h3>
+              <ul class="footer-links">
+                <li><a href="#.">My Account</a></li>
+                <li><a href="#cart">View Cart</a></li>
+                <li><a href="#">Track My Order</a></li>
+                <li><a href="#">Help</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div id="bottom-footer" class="section">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <ul class="footer-payments">
+              <li><a href="#"><i class="fa fa-cc-visa"></i></a></li>
+              <li><a href="#"><i class="fa fa-credit-card"></i></a></li>
+              <li><a href="#"><i class="fa fa-cc-paypal"></i></a></li>
+              <li><a href="#"><i class="fa fa-cc-mastercard"></i></a></li>
+              <li><a href="#"><i class="fa fa-cc-discover"></i></a></li>
+              <li><a href="#"><i class="fa fa-cc-amex"></i></a></li>
+            </ul>
+            <span class="copyright">
+
+              Copyright &copy;
+              <script data-cfasync="false"
+                src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+              <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made
+              with <i class="fa fa-heart-o" aria-hidden="true"></i> by Ohia Ikenna MarkHenry
+
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/nouislider.min.js"></script>
+  <script src="js/jquery.zoom.min.js"></script>
+  <script src="js/main.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+  <script type='text/javascript' src="js/jquery.mycart.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-23581568-13');
+  </script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v2b4487d741ca48dcbadcaf954e159fc61680799950996"
+    integrity="sha512-D/jdE0CypeVxFadTejKGTzmwyV10c1pxZk/AqjJuZbaJwGMyNHY3q/mTPWqMUnFACfCTunhZUVcd4cV78dK1pQ=="
+    data-cf-beacon='{"rayId":"7b61c9bb88f07312","version":"2023.3.0","b":1,"token":"cd0b4b3a733644fc843ef0b185f98241","si":100}'
+    crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      $(function () {
+  
+        var goToCartIcon = function ($addTocartBtn) {
+          var $cartIcon = $(".my-cart-icon");
+          var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({ "position": "fixed", "z-index": "999" });
+          $addTocartBtn.prepend($image);
+          var position = $cartIcon.position();
+          $image.animate({
+            top: position.top,
+            left: position.left
+          }, 500, "linear", function () {
+            $image.remove();
+          });
+        }
+  
+        $('.add-to-cart-btn').myCart({
+          currencySymbol: '₦',
+          classCartIcon: 'my-cart-icon',
+          classCartBadge: 'my-cart-badge',
+          classProductQuantity: 'my-product-quantity',
+          classProductRemove: 'my-product-remove',
+          classCheckoutCart: 'my-cart-checkout',
+          affixCartIcon: true,
+          showCheckoutModal: true,
+          numberOfDecimals: 2,
+          cartItems: [
+            { id: 1, name: 'product 1', summary: 'summary 1', price: 980, quantity: 1, image: 'img/product01.png' },
+            { id: 2, name: 'product 2', summary: 'summary 2', price: 990, quantity: 2, image: 'img/product02.png' },
+            { id: 3, name: 'product 3', summary: 'summary 3', price: 980, quantity: 1, image: 'img/product03.png' }
+          ],
+          clickOnAddToCart: function ($addTocart) {
+            goToCartIcon($addTocart);
+          },
+          afterAddOnCart: function (products, totalPrice, totalQuantity) {
+            console.log("afterAddOnCart", products, totalPrice, totalQuantity);
+          },
+          clickOnCartIcon: function ($cartIcon, products, totalPrice, totalQuantity) {
+            console.log("cart icon clicked", $cartIcon, products, totalPrice, totalQuantity);
+          },
+          checkoutCart: function (products, totalPrice, totalQuantity) {
+            var checkoutString = "Total Price: " + totalPrice + "\nTotal Quantity: " + totalQuantity;
+            checkoutString += "\n\n id \t name \t summary \t price \t quantity \t image path";
+            $.each(products, function () {
+              checkoutString += ("\n " + this.id + " \t " + this.name + " \t " + this.summary + " \t " + this.price + " \t " + this.quantity + " \t " + this.image);
+            });
+            alert(checkoutString)
+            console.log("checking out", products, totalPrice, totalQuantity);
+          },
+          getDiscountPrice: function (products, totalPrice, totalQuantity) {
+            console.log("calculating discount", products, totalPrice, totalQuantity);
+            return totalPrice * 0.5;
+          }
+        });
+  
+        $("#addNewProduct").click(function (event) {
+          var currentElementNo = $(".row").children().length + 1;
+          $(".row").append('<div class="col-md-3 text-center"><img src="images/img_empty.png" width="150px" height="150px"><br>product ' + currentElementNo + ' - <strong>$' + currentElementNo + '</strong><br><button class="add-to-cart-btn" data-id="' + currentElementNo + '" data-name="product ' + currentElementNo + '" data-summary="summary ' + currentElementNo + '" data-price="' + currentElementNo + '" data-quantity="1" data-image="images/img_empty.png">Add to Cart</button><a href="#" class="btn btn-info">Details</a></div>')
+        });
+      });
+    </script>
+     <script>
+      $(function() {
+          $('a[href*=#]:not([href=#])').click(function() {
+              if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                  var target = $(this.hash);
+                  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                  if (target.length) {
+                      $('html,body').animate({
+                          scrollTop: target.offset().top
+                      }, 1000);
+                      return false;
+                  }
+              }
+          });
+      });
+    </script>
+</body>
+
+<!-- Mirrored from preview.colorlib.com/theme/electro/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Apr 2023 08:16:47 GMT -->
+
+</html>
